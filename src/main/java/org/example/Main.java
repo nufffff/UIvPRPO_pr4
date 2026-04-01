@@ -13,6 +13,8 @@ public class Main {
   private static final Pattern PHONE_PATTERN =
           Pattern.compile("(\\+?\\d[\\d\\s()\\-]{8,}\\d)");
 
+  private static final String NEW_COUNTRY_CODE = "+1";
+
   public static void main(String[] args) {
     String inputFileName = "input.txt";
     String outputFileName = "output.txt";
@@ -94,7 +96,7 @@ public class Main {
     String localNumber = digits.substring(3);
 
     // Единый формат с новым кодом страны
-    return "+1 (" + areaCode + ") " + localNumber;
+    return NEW_COUNTRY_CODE + " (" + areaCode + ") " + localNumber;
   }
 
   // Класс для хранения результата
